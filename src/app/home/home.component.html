@@ -1,0 +1,53 @@
+<!-- <div *ngIf="authLoading || configLoading">Loading...</div>
+<div *ngIf="!authLoading && !configLoading">
+
+  Genre:
+  <select [(ngModel)]="selectedGenre" (ngModelChange)="setGenre($event)">
+    <option [value]=""></option>
+    <option [value]="genre" *ngFor="let genre of genres">
+      {{ genre }}
+    </option>
+  </select>
+
+
+</div> -->
+
+<div *ngIf="authLoading || configLoading">Loading...</div>
+<div class="config-container" *ngIf="!authLoading && !configLoading">
+
+
+  <div class="option-container">
+    <h2>Genre:</h2>
+    <select class="select-box" [(ngModel)]="selectedGenre" (ngModelChange)="setGenre($event)">
+      <option [value]=""></option>
+      <option [value]="genre" *ngFor="let genre of genres">
+        {{ genre }}
+      </option>
+    </select>
+  </div>
+
+  <div class="option-container">    
+
+    <h2>Number of Songs Per Guess:</h2>
+    <select class="select-box" >
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+    </select>
+
+  </div>
+
+  <div class="option-container">
+
+    <h2>Number of Artists Per Guess:</h2>
+    <select class="select-box" >
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+    
+  </div>
+
+  <button class="play-button" routerLink="/play">Play</button>
+
+</div>

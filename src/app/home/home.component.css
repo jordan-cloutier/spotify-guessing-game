@@ -1,0 +1,25 @@
+.config-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.option-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 3vh;
+}
+
+.select-box {
+    height: 5vh;
+    width: 25%;
+}
+
+.play-button {
+    height: 5vh;
+    width: 20%;
+}
